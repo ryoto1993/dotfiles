@@ -6,7 +6,7 @@ else
     let g:rc_dir = expand('~/.vim/rc')
 endif
 
-" rcファイル読み込み関数
+" rc file read
 function! s:source_rc(rc_file_name)
     let rc_file = expand(g:rc_dir . '/' . a:rc_file_name)
     if filereadable(rc_file)
@@ -16,32 +16,29 @@ endfunction
 
 "------------------------------------------------------------------------------
 
-" 基本設定
+" basic setting
 call s:source_rc('init.rc.vim')
 
-" エディタの設定
+" editor setting
 call s:source_rc('editor.rc.vim')
 
-" Dein.vim
-call s:source_rc('dein.rc.vim')
-
-" カラースキーマ
+" color schema
 call s:source_rc('color.rc.vim')
 
-" ターミナル設定（今の所NeoVimの :terminal の設定）
-call s:source_rc('terminal.rc.vim')
+" Jetpack
+call s:source_rc('jetpack.rc.vim')
 
 " neocomplete
-call s:source_rc('neocomplete.rc.vim')
+" call s:source_rc('neocomplete.rc.vim')
 
 " unite
-call s:source_rc('unite.rc.vim')
+" call s:source_rc('unite.rc.vim')
 
 " caw.vim
-call s:source_rc('caw.rc.vim')
+" call s:source_rc('caw.rc.vim')
 
 " NERDTree
-call s:source_rc('nerdtree.rc.vim')
+" call s:source_rc('nerdtree.rc.vim')
 
 " lightline.vim
-call s:source_rc('lightline.rc.vim')
+" call s:source_rc('lightline.rc.vim')
